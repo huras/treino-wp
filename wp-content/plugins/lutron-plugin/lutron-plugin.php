@@ -22,8 +22,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 class LutronPlugin
 {
     function __construct(){
+        add_action('admin_menu', array( $this, 'list_table_menu' ) );
     }
 
+    function list_table_menu(){
+        add_menu_page( "Lutron Plugin", "Lutron Plugin", "manage_options", "lutron-plugin", array( $this, "list_table_fn" ) );
+    }
+
+    function list_table_fn(){
+        ob_start();
+
+        include_once plugin_dir_path(__FILE__).'views/lutron-plugin-table-list.php';
+
+        $template = ob_get_contents();
+
+        ob_end_clean();
+
+        echo $template;
+    }
 
     function activate(){
 
