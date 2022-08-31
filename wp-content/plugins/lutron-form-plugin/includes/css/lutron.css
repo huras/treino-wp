@@ -1,0 +1,35 @@
+.btn-lutron{
+    background-color: #3371AD;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 20px 40px;
+    line-height: 1;
+    transition: all .3s;
+
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.btn-lutron:hover{
+    background-color: #F1B332;
+}
+
+
+.lutron-label{
+    color: #3371ad;
+    font-family: "Heebo", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.5em;
+}
+
+.lutron-input{
+    border: 1px solid #e3e3ea;
+    height: 42px;
+    padding: 8px 16px;
+}
+.lutron-input::placeholder{
+    color: #e3e3ea;
+}
