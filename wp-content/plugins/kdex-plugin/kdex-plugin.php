@@ -96,9 +96,15 @@ class KdexManager
             // 'capability_type'       => 'page',
         );
         register_post_type( 'knowledge', $args );
+
+        $this->register_knowledge_metaboxes();
     }
 
-    // Register Custom Technology
+    function register_knowledge_metaboxes(){
+        add_meta_box( 'meta-box-id', __( 'My Meta Box', 'textdomain' ), 'wpdocs_my_display_callback', 'post' );
+    }
+
+    // Register Custom Taxonomy
     function register_technology() {
 
         $labels = array(
