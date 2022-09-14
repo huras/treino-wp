@@ -101,8 +101,13 @@ class KdexManager
     }
 
     function register_knowledge_metaboxes(){
-        add_meta_box( 'meta-box-id', __( 'My Meta Box', 'textdomain' ), 'wpdocs_my_display_callback', 'post' );
+        if (!class_exists('Knowledge_Custom_Meta_Box')) {
+            include_once plugin_dir_path(__FILE__).'metaboxes/knowledge-custom-meta-box.php';
+        }
+
+        new Knowledge_Custom_Meta_Box();
     }
+
 
     // Register Custom Taxonomy
     function register_technology() {
