@@ -31,7 +31,7 @@ class Knowledge_Custom_Meta_Box {
 			'my-meta-box',
 			__( 'My Meta Box', 'textdomain' ),
 			array( $this, 'render_metabox' ),
-			'post',
+			'knowledge',
 			'advanced',
 			'default'
 		);
